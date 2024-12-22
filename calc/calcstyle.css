@@ -7,55 +7,79 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(to bottom, #141e30, #243b55);
-    color: #fff;
+    background: rgba(84, 80, 22, 0.784);
+    color: #333;
 }
 
-div.display {
+.display {
     width: 300px;
-    background: #1f2937;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    background: white;
+    border: 2px solid #0056b3;
+    border-radius: 10px;
     overflow: hidden;
 }
 
 /* Upper display section */
 .upper {
     padding: 20px;
-    background: #2d3748;
+    background: #e6f0ff;
     text-align: right;
-    font-size: 1.2em;
-    border-bottom: 1px solid #4a5568;
+    border-bottom: 1px solid #0056b3;
 }
 
 .upper .calc {
-    color: #a0aec0;
-    font-size: 0.8em;
+    color: #555;
+    font-size: 0.9em;
+    margin-bottom: 5px;
 }
 
 .upper .solution {
-    margin-top: 10px;
-    font-size: 1.8em;
+    font-size: 1.5em;
     font-weight: bold;
+    color: #0056b3;
 }
 
 /* Lower button section */
 .lower {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
-    padding: 20px;
+    padding: 15px;
+    background: white;
 }
 
 .lbutton {
-    background: #2d3748;
+    background: #0056b3;
     border: none;
-    display:grid;
-    color: #fff;
-    font-size: 20px;
-    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
     justify-content: center;
     align-items: center;
-    height: 60px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.lbutton:hover {
+    background: #003d80;
+}
+
+/* Special buttons */
+.lbutton:nth-child(4n) { /* Right-most operator buttons */
+    background: #ff4d4d;
+}
+
+.lbutton:nth-child(4n):hover {
+    background: #e60000;
+}
+
+.lbutton:nth-child(1) { /* Clear button */
+    background: #ff4d4d;
+}
+
+.lbutton:nth-child(1):hover {
+    background: #e60000;
 }

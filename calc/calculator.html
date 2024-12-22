@@ -3,36 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <link rel="stylesheet" href="calcstyle.css">
 </head>
 <body>
     <div class="display">
         <div class="upper">
-            <div class="calc">1250/50+9</div>
-            <div class="solution">259</div>
+            <div class="calc" id="calc-display"></div>
+            <div class="solution" id="solution-display">0</div>
         </div>
         <div class="lower">
-            <div class="lbutton">C</div>
-            <div class="lbutton">±</div>
-            <div class="lbutton">%</div>
-            <div class="lbutton">+</div>
-            <div class="lbutton">1</div>
-            <div class="lbutton">2</div>
-            <div class="lbutton">3</div>
-            <div class="lbutton">-</div>
-            <div class="lbutton">4</div>
-            <div class="lbutton">5</div>
-            <div class="lbutton">6</div>
-            <div class="lbutton">x</div>
-            <div class="lbutton">7</div>
-            <div class="lbutton">8</div>
-            <div class="lbutton">9</div>
-            <div class="lbutton">/</div>
-            <div class="lbutton">0</div>
-            <div class="lbutton">.</div>
-            <div class="lbutton">=</div>
+            <div class="lbutton" onclick="clearDisplay()">C</div>
+            <div class="lbutton" onclick="toggleSign()">±</div>
+            <div class="lbutton" onclick="appendToDisplay('%')">%</div>
+            <div class="lbutton" onclick="appendToDisplay('+')">+</div>
+            <div class="lbutton" onclick="appendToDisplay('1')">1</div>
+            <div class="lbutton" onclick="appendToDisplay('2')">2</div>
+            <div class="lbutton" onclick="appendToDisplay('3')">3</div>
+            <div class="lbutton" onclick="appendToDisplay('-')">-</div>
+            <div class="lbutton" onclick="appendToDisplay('4')">4</div>
+            <div class="lbutton" onclick="appendToDisplay('5')">5</div>
+            <div class="lbutton" onclick="appendToDisplay('6')">6</div>
+            <div class="lbutton" onclick="appendToDisplay('*')">x</div>
+            <div class="lbutton" onclick="appendToDisplay('7')">7</div>
+            <div class="lbutton" onclick="appendToDisplay('8')">8</div>
+            <div class="lbutton" onclick="appendToDisplay('9')">9</div>
+            <div class="lbutton" onclick="appendToDisplay('/')">/</div>
+            <div class="lbutton" onclick="appendToDisplay('0')">0</div>
+            <div class="lbutton" onclick="appendToDisplay('.')">.</div>
+            <div class="lbutton" onclick="calculateResult()">=</div>
         </div>
     </div>
+
+    <script src="calculator.js"></script>
 </body>
 </html>
